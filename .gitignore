@@ -9,7 +9,6 @@
 # Local History for Visual Studio Code
 .history/
 
-# dotnet
 # User-specific files
 *.suo
 *.user

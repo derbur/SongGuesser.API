@@ -6,7 +6,7 @@ using SongGuesser.Models;
 namespace SongGuesser.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("track")]
     public class TrackController : ControllerBase
     {
         private static ITrackService _trackService;

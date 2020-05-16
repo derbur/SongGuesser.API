@@ -10,7 +10,7 @@ using Microsoft.Extensions.Configuration;
 namespace SongGuesser.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("login")]
     public class LoginController : ControllerBase
     {
         // This logic could be pulled out into a service (if ever actually needed 🧐)
@@ -35,6 +35,7 @@ namespace SongGuesser.Controllers
             Response.Redirect($"https://connect.deezer.com/oauth/auth.php?app_id={APP_ID}&redirect_uri={REDIRECT_URI}&perms=basic_access,email");
         }
 
+        [HttpGet]
         [Route("redirect")]
         public async Task<RedirectResult> HandleLoginResponse([FromQuery(Name = "code")] string accessCode, [FromQuery(Name = "error_reason")] string errorReason)
         {
