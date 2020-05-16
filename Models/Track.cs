@@ -7,5 +7,7 @@ namespace SongGuesser.Models
         public string Title { get; set; }
         [JsonPropertyName("preview")]
         public string Preview { get; set; }
+        [JsonPropertyName("artist")]
+        public Artist Artist { get; set; }
     }
 }
