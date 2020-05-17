@@ -34,6 +34,8 @@ namespace SongGuesser
 
             services.AddScoped<ITrackService, TrackService>();
             services.AddScoped<IGenreService, GenreService>();
+            services.AddScoped<IChartService, ChartService>();
+            services.AddScoped<IPlaylistService, PlaylistService>();
 
             services.AddSwaggerGen(c => {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "SongGuesser API", Version = "v1" });
